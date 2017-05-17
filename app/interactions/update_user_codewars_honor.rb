@@ -2,7 +2,7 @@ class UpdateUserCodewarsHonor
   include Interactor
 
   CODEWARS_API_URL = "https://codewars.com/api/v1".freeze
-  CODEWARS_API_TOKEN = ENV.fetch("CODEWARS_API_TOKEN")
+  CODEWARS_API_TOKEN = ENV.fetch("CODEWARS_API_TOKEN", nil)
 
   def call
     return unless codewars_handle.present?
